@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-const MONGODB_URI = "mongodb://localhost:27017/chat-app"
+const MONGODB_URI = "mongodb+srv://ganga:ganga333@mern-apps.755m5.mongodb.net/chat-app?retryWrites=true&w=majority&appName=mern-apps"
 
 const connectToMongoDB = async () => {
     try {
