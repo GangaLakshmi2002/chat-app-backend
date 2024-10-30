@@ -10,6 +10,7 @@ const io = new Server(server, {
 		// origin: ["http://localhost:3000"],
 		origin: ["https://chat-app-frontend-1-ksl4.onrender.com", "https://chat-app-backend-tlvm.onrender.com"],
 		methods: ["GET", "POST", "PUT", "DELETE"],
+		credentials: true
 	},
 });
 
