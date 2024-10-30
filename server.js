@@ -10,6 +10,7 @@ import messageRoutes from "./routes/message.route.js";
 import userRoutes from "./routes/user.route.js";
 import connectToMongoDB from './db/connectToMongoDB.js';
 import {app, server} from "./socket/socket.js";
+import cors from "cors";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
@@ -17,6 +18,11 @@ dotenv.config({ path: path.resolve(__dirname, '.env') });
 
 // const __dirname = path.resolve();
 const PORT = process.env.PORT || 5000;
+app.use(cors({
+    origin: "https://chat-app-frontend-1-ksl4.onrender.com",
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true
+  }));
 
 app.use(express.json());// to parse the incoming requests with JSON payloads (from req.body)
 app.use(cookieParser());
