@@ -8,8 +8,8 @@ const server = http.createServer(app);
 const io = new Server(server, {
 	cors: {
 		// origin: ["http://localhost:3000"],
-		origin: ["https://chat-app-frontend-1-ksl4.onrender.com"],
-		methods: ["GET", "POST"],
+		origin: ["https://chat-app-frontend-1-ksl4.onrender.com", "https://chat-app-backend-tlvm.onrender.com"],
+		methods: ["GET", "POST", "PUT", "DELETE"],
 	},
 });
 
