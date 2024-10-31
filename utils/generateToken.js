@@ -12,6 +12,7 @@ const generateTokenAndSetCookie = (userId, res) => {
         // secure: process.env.NODE_ENV !== "development"
         domain: ".onrender.com",
     });
+    return token;
 }
 
 export default generateTokenAndSetCookie;
