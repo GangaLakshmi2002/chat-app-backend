@@ -10,6 +10,7 @@ const generateTokenAndSetCookie = (userId, res) => {
         httpOnly: true,
         sameSite: "strict",
         // secure: process.env.NODE_ENV !== "development"
+        domain: ".onrender.com",
     });
 }
 
